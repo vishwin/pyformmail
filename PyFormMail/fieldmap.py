@@ -1,0 +1,22 @@
+fields={
+	'recipient': 'FM_RECIPIENT',
+	'subject': 'FM_SUBJECT',
+	'email': 'FM_EMAIL',
+	'realname': 'FM_REALNAME',
+	'redirect': 'FM_REDIRECT',
+	'required': 'FM_REQUIRED',
+	'env_report': 'FM_ENV_REPORT',
+	'sort': 'FM_SORT',
+	'print_config': 'FM_PRINT_CONFIG',
+	'print_blank_fields': 'FM_PRINT_BLANK_FIELDS',
+	'title': 'FM_TITLE',
+	'return_link_url': 'FM_RETURN_LINK_URL',
+	'return_link_title': 'FM_RETURN_LINK_TITLE',
+	'missing_fields_redirect': 'FM_MISSING_FIELDS_REDIRECT',
+	'background': 'FM_BACKGROUND',
+	'bgcolor': 'FM_BGCOLOR',
+	'text_color': 'FM_TEXT_COLOR',
+	'link_color': 'FM_LINK_COLOR',
+	'vlink_color': 'FM_VLINK_COLOR',
+	'alink_color': 'FM_ALINK_COLOR'
+}
