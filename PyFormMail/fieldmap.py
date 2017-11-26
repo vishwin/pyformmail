@@ -18,5 +18,6 @@ fields={
 	'text_color': 'FM_TEXT_COLOR',
 	'link_color': 'FM_LINK_COLOR',
 	'vlink_color': 'FM_VLINK_COLOR',
-	'alink_color': 'FM_ALINK_COLOR'
+	'alink_color': 'FM_ALINK_COLOR',
+	'comment': 'FM_COMMENT'
 }
