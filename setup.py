@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
 	name='PyFormMail',
-	version='17.09.18',
+	version='17.11.25',
 	description='Drop-in replacement for FormMail.pl',
 	author='Charlie Li',
 	license='BSD-3',
