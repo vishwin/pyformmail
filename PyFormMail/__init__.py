@@ -11,7 +11,7 @@ if 'FORMMAIL_CONFIG' in environ:
 	app.config.from_envvar('FORMMAIL_CONFIG')
 from PyFormMail.fieldmap import fields
 
-@app.route('/formmail', methods=['POST'])
+@app.route('/', methods=['POST'])
 def email_form():
 	for field, data in request.form.items():
 		app.config[fields[field]]=data
@@ -26,4 +26,4 @@ def email_form():
 Sent from a web form.""")
 	with smtplib.SMTP(host=app.config['MAIL_SERVER'], port=app.config['MAIL_PORT']) as s:
 		s.send_message(msg)
-	return Response(msg.as_string(), mimetype='text/plain')
+	return Response("Your message has been sent. The complete email source code is below:\n\n" + msg.as_string(), mimetype='text/plain')
