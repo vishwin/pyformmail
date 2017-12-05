@@ -25,5 +25,7 @@ def email_form():
 *********************
 Sent from a web form.""")
 	with smtplib.SMTP(host=app.config['MAIL_SERVER'], port=app.config['MAIL_PORT']) as s:
+		if app.config['MAIL_USE_TLS']:
+			s.starttls()
 		s.send_message(msg)
 	return Response("Your message has been sent. The complete email source code is below:\n\n" + msg.as_string(), mimetype='text/plain')
