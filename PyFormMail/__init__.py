@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, redirect
 from os import environ
 
 import smtplib
@@ -28,4 +28,7 @@ Sent from a web form.""")
 		if app.config['MAIL_USE_TLS']:
 			s.starttls()
 		s.send_message(msg)
-	return Response("Your message has been sent. The complete email source code is below:\n\n" + msg.as_string(), mimetype='text/plain')
+	try:
+		return redirect(app.config['FM_REDIRECT'])
+	finally:
+		return Response("Your message has been sent. The complete email source code is below:\n\n" + msg.as_string(), mimetype='text/plain')
