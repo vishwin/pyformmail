@@ -30,5 +30,5 @@ Sent from a web form.""")
 		s.send_message(msg)
 	try:
 		return redirect(app.config['FM_REDIRECT'])
-	finally:
+	except:
 		return Response("Your message has been sent. The complete email source code is below:\n\n" + msg.as_string(), mimetype='text/plain')
